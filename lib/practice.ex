@@ -22,18 +22,18 @@ defmodule Practice do
   end
 
   def pali(str) do
-    # Practice.Pali.pali(str)
-    # str
-    #   |> String.downcase()
-    #   |> String.reverse()
-    #   |> String.split(~r/\s+/)
+    pali_str = str
 
-    # if str === pali_str do
-    #   IO.puts "True"
-    # else
-    #   IO.puts "False"
-    # end
-    str + str
+    str
+      |> String.downcase()
+      |> String.reverse()
+      |> String.split(~r/\s+/)
+
+    if str == pali_str do
+      True
+    else
+      False
+    end
   end
 
 end

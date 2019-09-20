@@ -23,7 +23,7 @@ defmodule PracticeWeb.PageController do
 
   def pali(conn, %{"str" => str}) do
      y = Practice.pali(str)
-    render conn, "pali.html", str: str, y: y
+    render conn, "pali.html", str: y, y: y
   end
 
 end
