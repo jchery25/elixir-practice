@@ -22,8 +22,12 @@ defmodule PracticeWeb.PageController do
   end
 
   def pali(conn, %{"str" => str}) do
-     y = Practice.pali(str)
-    render conn, "pali.html", str: y, y: y
+    new_str = str
+      |> String.replace(~r/[[:punct:]]/, "")
+      |> String.replace(" ", "")
+      |> String.downcase()
+    y = Practice.pali(str)
+    render conn, "pali.html", str: new_str, y: y
   end
 
 end

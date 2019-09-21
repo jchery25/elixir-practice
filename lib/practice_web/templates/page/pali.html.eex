@@ -3,6 +3,6 @@
     <p><%= link "← go back", to: "/" %></p>
     <h2>Palindrome Results</h2>
 
-    <p><%= @str %></p>
+    <p><%= @str %> = <%= @y %> </p>
   </div>
 </div>

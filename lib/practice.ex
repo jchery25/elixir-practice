@@ -25,15 +25,11 @@ defmodule Practice do
     pali_str = str
 
     str
+      |> String.replace(~r/[[:punct:]]/, "")
+      |> String.replace(~r/" "/, "")
       |> String.downcase()
       |> String.reverse()
-      |> String.split(~r/\s+/)
-
-    if str == pali_str do
-      True
-    else
-      False
-    end
+      |> String.equivalent?(pali_str)
   end
 
 end
