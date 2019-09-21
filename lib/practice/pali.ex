@@ -1,17 +1,13 @@
 defmodule Practice.Pali do
 
   def pali(str) do
+    pali_str = str
 
-
-    # pali_str = str
-    #   |> String.split(~r/\s+/)
-    #   |> String.downcase()
-    #   |> String.reverse()
-
-    # if str == pali_str do
-    #   IO.puts "True"
-    # else
-    #   IO.puts "False"
-    # end
+    str
+      |> String.replace(~r/[[:punct:]]/, "")
+      |> String.replace(~r/" "/, "")
+      |> String.downcase()
+      |> String.reverse()
+      |> String.equivalent?(pali_str)
   end
 end

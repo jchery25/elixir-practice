@@ -17,19 +17,11 @@ defmodule Practice do
   end
 
   def factor(x) do
-    # Maybe delegate this too.
-    [1,2,x]
+    Practice.Factor.factor(x)
   end
 
   def pali(str) do
-    pali_str = str
-
-    str
-      |> String.replace(~r/[[:punct:]]/, "")
-      |> String.replace(~r/" "/, "")
-      |> String.downcase()
-      |> String.reverse()
-      |> String.equivalent?(pali_str)
+    Practice.Pali.pali(str)
   end
 
 end
